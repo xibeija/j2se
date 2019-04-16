@@ -6,6 +6,7 @@ public class HelloWorld {
 		System.out.println("hello world !!!!");
 		System.out.println("java forever !!!");
 		System.out.println("自己本地的项目，修改一下上传到git");
+		System.out.println("再来一次");
 	}
 
 }
