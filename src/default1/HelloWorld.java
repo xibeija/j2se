@@ -31,7 +31,45 @@ public class HelloWorld {
 		HelloWorld kk = new HelloWorld();
 		kk.method2(33333);*/
 		System.out.println("++++++++++++++++++++++++++++++++++");
-		Scanner S = new Scanner(System.in);
+		Scanner s = new Scanner(System.in);
+		System.out.println(s.nextLine());
+		/*Scanner s = new Scanner(System.in);
+		System.out.println("今天是周几？");
+		int day = s.nextInt();
+		String statu = day >= 6 ? "周末" : "工作日" ;
+		System.out.println("今天是"+statu);*/
+		
+		/*int i = 5;
+		int j = 6;
+		int k = i>j?44:99;
+		System.out.println(k);
+		System.out.println(i>j?44:99);*/
+		/*int i = -10;
+		System.out.println(Integer.toBinaryString(i>>1));
+		System.out.println(i>>1);
+		System.out.println(Integer.toBinaryString(i>>>1));
+		System.out.println(i>>>1);*/
+		/*int i = 5;
+		int j = 6;
+		System.out.println(Integer.toBinaryString(i));
+		System.out.println(Integer.toBinaryString(j));
+		System.out.println(i|j);
+		System.out.println(Integer.toBinaryString(i|j));
+		System.out.println(i&j);
+		System.out.println(Integer.toBinaryString(i&j));
+		System.out.println(i^j);
+		System.out.println(Integer.toBinaryString(i^j));
+		System.out.println(i^0);
+		System.out.println(i^i);
+		System.out.println(~i);
+		System.out.println(Integer.toBinaryString(~i));
+		System.out.println(~i);
+		System.out.println(Integer.toBinaryString(j));
+		System.out.println(j<<1);
+		System.out.println(Integer.toBinaryString(j<<1));
+		System.out.println(j>>1);
+		System.out.println(Integer.toBinaryString(j>>1));*/
+		/*Scanner S = new Scanner(System.in);
 		System.out.println("请输入你的体重");
 		float A = S.nextFloat();
 		System.out.println("体重:"+A);
@@ -39,7 +77,7 @@ public class HelloWorld {
 		System.out.println("请输入你的身高");
 		float B = S.nextFloat();
 		System.out.println("身高:"+B);
-		System.out.println("比较"+A+">"+B+":"+(A>B));
+		System.out.println("比较"+A+">"+B+":"+(A>B));*/
 		/*float C = A / (B*B) ;
 		System.out.println("BMI:"+C);*/
 		
