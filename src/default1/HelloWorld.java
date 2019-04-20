@@ -30,6 +30,7 @@ public class HelloWorld {
 		System.out.println("----------------------------");
 		HelloWorld kk = new HelloWorld();
 		kk.method2(33333);*/
+		System.out.println("哈哈，Mac配置成功啦！！！！！");
 		System.out.println("++++++++++++++++++++++++++++++++++");
 		Scanner s = new Scanner(System.in);
 		System.out.println(s.nextLine());
