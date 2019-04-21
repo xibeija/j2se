@@ -58,11 +58,52 @@ public class Hero {
 		teemo.armor = 14f;
 		teemo.moveSpeed = 330;
 		
-		/*System.out.println(garen.moveSpeed);
+		System.out.println(garen.moveSpeed);
 		System.out.println(teemo.moveSpeed);
 		System.out.println(garen.moveSpeed==teemo.moveSpeed);
-		System.out.println(garen.moveSpeed);*/
+		System.out.println(garen.moveSpeed);
 		
 	}
 	
 }
+
+/*public class Hero {
+	 
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int[] array = new int[10];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = new Random().nextInt(200);
+        }
+        xuanZeSort(array);
+        maoPaoReverseSort(array);
+    }
+ 
+    private static void xuanZeSort(int[] array) {
+        System.out.println("before xuanZeSort:" + Arrays.toString(array));
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    array[i] += array[j];
+                    array[j] = array[i] - array[j];
+                    array[i] -= array[j];
+                }
+            }
+        }
+        System.out.println("after xuanZeSort:" + Arrays.toString(array));
+    }
+ 
+    private static void maoPaoReverseSort(int[] array) {
+        System.out.println("before maoPaoReverseSort:" + Arrays.toString(array));
+        for (int i = array.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (array[j] < array[j + 1]) {
+                    array[j] += array[j + 1];
+                    array[j + 1] = array[j] - array[j + 1];
+                    array[j] -= array[j + 1];
+                }
+            }
+        }
+        System.out.println("after maoPaoReverseSort:" + Arrays.toString(array));
+    }
+}*/

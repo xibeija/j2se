@@ -4,7 +4,73 @@ package default1;
 public class HelloWorld {
     public static void main(String[] args) {
   
-        int moneyEachDay = 0;
+    	int[] a = new int[5];
+    	System.out.println(a[0]);
+    	a[0] = (int) (Math.random()*100);
+    	a[1] = (int) (Math.random()*100);
+    	a[2] = (int) (Math.random()*100);
+    	a[3] = (int) (Math.random()*100);
+    	a[4] = (int) (Math.random()*100);
+    	System.out.println("数组中的各个随机数是：");
+    	for(int i=0; i<a.length; i++){
+    		System.out.println(a[i]);
+    	}
+    	for(int i=0; i<a.length/2; i++){
+    		int temp=a[i];
+    		a[i]=a[a.length-1-i];//a.lengh为总长度5，作为角标最大是4，所以应该先减1，然后再减去i，这样就把位置替换了！！！
+    		a[a.length-1-i]=temp;
+    	}
+    	
+    	//选择排序法，需要i,j,比较的是a[i]与a[j]的大小，i与j之间有关系，i=j+1.j从0开始。
+    	System.out.println("选择排序--从小到大排序");
+    	for (int j = 0; j < a.length-1; j++) {
+            for (int i = j+1; i < a.length; i++) {
+                if(a[i]<a[j]){  
+                    int temp = a[j];
+                    a[j] = a[i];//主要就是这一步！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+                    a[i] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println();
+        System.out.println("========================");
+        
+        //冒泡排序法，虽然都需要i,j,但是比较的是a[i]与a[i+1]的大小，i与j之间没有关系，i,j都是从0开始。
+        System.out.println("冒泡排序--从大到小排序");
+        for (int j = 0; j < a.length; j++) {
+            for (int i = 0; i < a.length-1-j; i++) {
+                if(a[i]<a[i+1]){  
+                    int temp = a[i];
+                    a[i] = a[i+1];//主要就是这一步！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+                    a[i+1] = temp;
+                }
+            }
+        }
+          
+        //把内容打印出来
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println(); 
+        
+    	System.out.println("翻转后的值如下：");
+    	for(int i=0; i<a.length; i++){
+    		System.out.println(a[i]);
+    	}
+    	System.out.println("----------------");
+    	int min = 100;
+    	for(int i=0; i<a.length; i++){
+    		if(a[i]<min){
+    			min=a[i];
+    		}
+    	}
+    	System.out.println("随机数中的最小值是："+min);
+    }
+}
+        /*int moneyEachDay = 0;
         int day = 10;
         int sum=0;
         for (int i = 1; i <= day; i++) {
@@ -16,10 +82,10 @@ public class HelloWorld {
             sum+=moneyEachDay;
               
             System.out.println(i + " 天之后，洪帮主手中的钱总数是: " + sum );
-        }
-    }
+        }*/
+    
   
-}
+
 
 /*
  * package default1;
