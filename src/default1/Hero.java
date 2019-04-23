@@ -1,6 +1,48 @@
 package default1;
 
 public class Hero {
+    
+    String name; //姓名
+        
+    float hp; //血量
+        
+    float armor; //护甲
+        
+    int moveSpeed; //移动速度
+     
+    public Hero(){
+         
+    }
+     
+    public Hero(String name,float hp){
+        this.name = name;
+        this.hp = hp;
+    }
+ 
+    //复活
+    public void revive(Hero h){
+        h = new Hero("提莫",383);
+    }
+ 
+    public static void main(String[] args) {
+        Hero teemo =  new Hero("提莫",383);
+         
+        //受到400伤害，挂了
+        teemo.hp = teemo.hp - 400;
+        System.out.println(teemo.hp);
+        
+        teemo.revive(teemo);
+        System.out.println(teemo.hp);
+         
+        //问题： System.out.println(teemo.hp); 输出多少？ 怎么理解？
+         
+    }
+      
+}
+
+/*package default1;
+
+public class Hero {
 
 	String name;
 	float hp;
@@ -65,12 +107,37 @@ public class Hero {
 		
 	}
 	
-}
+}*/
+
+/*package default1;
+
+public class Hero {
+ 
+    String name;
+ 
+    float hp;
+ 
+    float armor;
+ 
+    int moveSpeed;
+ 
+    // 方法名和类名一样（包括大小写）
+    // 没有返回类型
+    public Hero() {
+        System.out.println("实例化一个对象的时候，必然调用构造方法");
+    }
+     
+    public static void main(String[] args) {
+        //实例化一个对象的时候，必然调用构造方法
+        Hero h = new Hero();
+    }
+ 
+}*/
+
 
 /*public class Hero {
 	 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         int[] array = new int[10];
         for (int i = 0; i < array.length; i++) {
             array[i] = new Random().nextInt(200);
