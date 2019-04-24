@@ -5,6 +5,11 @@ import java.util.Arrays;
 public class HelloWorld {
     public static void main(String[] args) {
   
+    	//枚举遍历
+    	for(Season s:Season.values()){
+    		System.out.println(s);
+    	}
+    	
     	//对二维数组进行重新排序，转变为字符串再进行的排序。
     	int[][] a = new int[5][8];
     	for(int i=0; i<a.length; i++){
