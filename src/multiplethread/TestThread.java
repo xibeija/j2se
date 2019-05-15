@@ -1,10 +1,31 @@
 package multiplethread;
 
-import charactor.Hero;
+import java.io.File;
 
 public class TestThread {
-    
+	static ThreadPool pool= new ThreadPool();
+    public static void search(File file, String search) {
+         
+        if (file.isFile()) {
+            if(file.getName().toLowerCase().endsWith(".java")){
+                SearchFileTask task = new SearchFileTask(file, search);
+                pool.add(task);
+            }
+        }
+        if (file.isDirectory()) {
+            File[] fs = file.listFiles();
+            for (File f : fs) {
+                search(f, search);
+            }
+        }
+    }
+       
     public static void main(String[] args) {
+        File folder =new File("e:\\project");
+        search(folder,"Magic");
+    }
+}
+    /*public static void main(String[] args) {
             
         final Hero gareen = new Hero();
         gareen.name = "盖伦";
@@ -90,7 +111,7 @@ public class TestThread {
            
     }
         
-}
+}*/
 
 //public class TestThread {
 //	 
