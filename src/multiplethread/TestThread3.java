@@ -23,7 +23,7 @@ public class TestThread3 {
                      
                     //任何线程要修改hp的值，必须先占用someObject
                     synchronized (someObject) {
-                        gareen.recover();
+  //                      gareen.recover();
                     }
                      
                     try {
@@ -44,7 +44,7 @@ public class TestThread3 {
                 public void run(){
                     //任何线程要修改hp的值，必须先占用someObject
                     synchronized (someObject) {
-                        gareen.hurt();
+  //                      gareen.hurt();
                     }
                      
                     try {

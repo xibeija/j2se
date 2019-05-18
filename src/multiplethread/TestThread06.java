@@ -8,7 +8,7 @@ public class TestThread06 {
 		  
         final Hero gareen = new Hero();
         gareen.name = "盖伦";
-        gareen.hp.set(10000);
+//        gareen.hp.set(10000);
         int n = 10000;
    
         Thread[] addThreads = new Thread[n];
@@ -19,7 +19,7 @@ public class TestThread06 {
                 public void run(){
                       
                     //recover自带synchronized
-                    gareen.recover();
+//                    gareen.recover();
                       
                     try {
                         Thread.sleep(100);
@@ -38,7 +38,7 @@ public class TestThread06 {
             Thread t = new Thread(){
                 public void run(){
                     //hurt自带synchronized
-                    gareen.hurt();
+ //                   gareen.hurt();
                       
                     try {
                         Thread.sleep(100);
@@ -69,7 +69,7 @@ public class TestThread06 {
             }
         }
            
-        System.out.printf("%d个增加线程和%d个减少线程结束后%n盖伦的血量是 %.0f%n", n,n,gareen.hp.floatValue());
+ //       System.out.printf("%d个增加线程和%d个减少线程结束后%n盖伦的血量是 %.0f%n", n,n,gareen.hp.floatValue());
            
     }
 	

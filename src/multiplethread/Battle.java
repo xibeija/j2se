@@ -13,8 +13,8 @@ public class Battle implements Runnable{
     }
  
     public void run(){
-        while(!h2.isDead()){
-            h1.attackHero(h2);
+//        while(!h2.isDead()){
+//            h1.attackHero(h2);
         }
     }
-}
+//}

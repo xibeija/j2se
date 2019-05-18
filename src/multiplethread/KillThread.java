@@ -11,8 +11,8 @@ public class KillThread extends Thread {
 		this.h2 = h2;
 	}
 	public void run() {
-		while(!h2.isDead()) {
-			h1.attackHero(h2);
+//		while(!h2.isDead()) {
+//			h1.attackHero(h2);
 		}
 	}
-}
+//}
